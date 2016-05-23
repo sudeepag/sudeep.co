@@ -3,3 +3,37 @@ title: Talks
 layout: default
 permalink: /talks/
 ---
+
+{% capture index %}
+    {{ site.data.talks | size }}
+{%endcapture %}
+
+{% for talk in site.data.talks %}
+
+    <div class="talk-entry-wrapper" id="{{ index }}">
+    	<div class="talk-col talk-col-1">
+    		<h1 class="talk-title">{{ talk.title }}</h1>
+    		<span class="post-meta">{{ talk.date | date: "%b %-d, %Y at %I:%M %p" }}, at {{ talk.location }}</span>
+    	</div>
+    	<div class="talk-col talk-col-2">
+    		{% if talk.video_link %}<a href="{{ talk.video_link }}">Video</a><br>{% endif %}
+    		{% if talk.slides_link %}<a href="{{ talk.slides_link }}">Slides</a><br>{% endif %}
+    	</div>
+    </div>
+    <div>
+    	<p class="talk-description">
+    		{{ talk.description }}
+    	</p>
+    </div>
+
+    {% capture index %}
+        {{ index | minus: 1 }}
+    {% endcapture %}
+
+{% endfor %}
+
+<div class="talk-plug">
+    <p>
+    Need a speaker for an event or meetup? Drop me an <a href="{{site.email}}">email<a/>.
+    </p>
+</div>

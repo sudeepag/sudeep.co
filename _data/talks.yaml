@@ -1,0 +1,13 @@
+- title: Creating Rich, Interactive Mobile Experiences
+  date: 2015-06-25 16:00:00
+  location: PayPal Singapore
+  video_link: "https://www.youtube.com/watch?v=Of4flwvlYz4"
+  slides_link: "https://google.com"
+  description: "In this talk, I presented the thought process behind designing the user experience when I was working on <a href='https://glycoleap.com'>Glyco</a>. I talked about the elements that make a transition or animation successful, and briefly went through the implementations for some of them."
+
+- title: Skylink iOS SDK and WebRTC
+  date: 2015-05-18 2:00:00
+  location: BLK 71, Singapore
+  video_link: "https://www.youtube.com/watch?v=k3TZ2ikZVwI"
+  slides_link: "https://speakerdeck.com/sudeepag/skylink-ios-sdk-for-native-webrtc-implementation"
+  description: "This was my very first talk at the iOS Dev Scout Meetup in Singapore. I presented about my work at Temasys, where I used Web Real Time (WebRTC) Communication technology to develop and audio and video calling application called <a href='https://getaroom.io'>getaroom.io</a>. I also talked about how other developers could easily integrate the SDK into their own apps."

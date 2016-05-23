@@ -325,3 +325,48 @@ $intro-header-padding:     10px;
         }
     }
 }
+
+/**
+ * Talks
+ */
+ .talk-title {
+    margin: 0;
+ }
+
+ .talk-entry-wrapper {
+    display: table;
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.talk-col {
+    float: left;
+}
+
+.talk-col-1 {
+    width: 80%
+}
+
+.talk-col-2 {
+    text-align: right;
+    width: 20%;
+}
+
+.talk-description {
+    text-align: justify;
+}
+
+.talk-plug {
+    font-weight: 400;
+}
+
+// @include isSmallTablet() {
+//     .talk-col {
+//         float: none;
+//         width: 100%
+//     }
+//     .talk-col-2 {
+//         text-align: left;
+//     }
+// }
