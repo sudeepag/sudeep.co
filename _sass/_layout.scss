@@ -370,3 +370,54 @@ $intro-header-padding:     10px;
 //         text-align: left;
 //     }
 // }
+
+/**
+ * Projects
+ */
+.projects {
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        >li {
+            padding-top: 10px;
+        }
+    }
+
+    img {
+        width: 20px;
+        margin: 0px 6px 4px 2px;
+    }
+
+    table {
+        padding-top: 10px;
+    }
+
+    tr {
+
+        >td {
+            padding-bottom: 15px;
+            vertical-align: top;
+            text-align: justify;
+        }
+
+        >td:nth-child(odd) {
+            width: 178px;
+            text-align: right;
+            font-weight: 600;
+            font-size: 11pt;
+            padding-right: 15px;
+
+            // @include isPhone() {
+            //     width: 20%;
+            //     text-align: left;
+            // }
+        }
+
+        >td:nth-child(even) {
+            padding-left: 20px;
+        }
+    }
+}
