@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="27px" height="26px" viewBox="0 0 27 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Medium</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Main-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop" sketch:type="MSArtboardGroup" transform="translate(-512.000000, -263.000000)">
+            <g id="Header" sketch:type="MSLayerGroup" transform="translate(0.000000, 1.000000)">
+                <g id="Personal-section" transform="translate(320.000000, 85.000000)" sketch:type="MSShapeGroup">
+                    <g id="Social-buttons" transform="translate(82.000000, 177.500000)">
+                        <g id="Medium" transform="translate(111.000000, 0.000000)">
+                            <circle id="Oval-2" stroke="#3B7BDA" cx="12.5" cy="12.5" r="12.5"></circle>
+                            <g id="clothes7" transform="translate(6.000000, 7.300000)" fill="#3B7BDA">
+                                <path d="M12.9962397,1.40209821 L12.2791178,1.40209821 C12.0923905,1.40209821 11.6037893,1.60438393 11.6037893,1.77658929 L11.6037893,8.03016964 C11.6037893,8.20280357 12.0923905,8.34433929 12.2791178,8.34433929 L12.9962397,8.34433929 L12.9962397,9.73277679 L8.35470248,9.73277679 L8.35470248,8.34433929 L9.28323554,8.34433929 L9.28323554,1.8646875 L9.12164876,1.8646875 L6.88731405,9.73275 L5.15740083,9.73275 L2.95196694,1.8646875 L2.78492769,1.8646875 L2.78492769,8.3443125 L3.71305785,8.3443125 L3.71305785,9.73275 L0,9.73275 L0,8.3443125 L0.514977273,8.3443125 C0.71714876,8.3443125 0.928157025,8.20280357 0.928157025,8.03014286 L0.928157025,1.77658929 C0.928157025,1.60435714 0.71717562,1.40209821 0.514977273,1.40209821 L0,1.40209821 L0,0.0135 L4.81201446,0.0135 L6.38318802,5.56730357 L6.42546488,5.56730357 L8.01213636,0.0135 L12.9962397,0.0135 L12.9962397,1.40209821 L12.9962397,1.40209821 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

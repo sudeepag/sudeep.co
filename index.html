@@ -2,24 +2,53 @@
 layout: default
 ---
 
-# {{ page.title }}
+<div class="intro">
 
-<div class="home">
+		<div class="intro-title">
+			<div class="intro-col intro-col-1">
+				<img class="profile-picture" src="/images/sudeep.jpg">
+			</div>
+			<div class="intro-col intro-col-2">
+				<span class="name">Sudeep Agarwal</span> <br>
+				Data Science Intern <br>
+				<span class="location">San Francisco</span>
+			</div>
+		</div>
 
-  <h1 class="page-heading">Posts</h1>
+        <div class="intro-links">
+                    <a class="intro-link-item" href="https://www.facebook.com/sudeep135" target="_blank"><img src="/images/facebook.svg"></a>
+                    <a class="intro-link-item" href="https://www.twitter.com/sudeeeeeep" target="_blank"><img src="/images/twitter.svg"></a>
+                    <a class="intro-link-item" href="https://www.instagram.com/sudeeeeeep" target="_blank"><img src="/images/instagram.svg"></a>
+                    <a class="intro-link-item" href="https://www.medium.com/@sudeep.agarwal" target="_blank"><img src="/images/medium.svg"></a>
+                    <a class="intro-link-item" href="https://www.github.com/sudeepag" target="_blank"><img src="/images/github.svg"></a>
+                    <a class="intro-link-item" href="https://www.linkedin.com/in/sudeepag" target="_blank"><img src="/images/linkedin.svg"></a>
+        </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+		<div class="intro-summary">
+            <p class="intro-intro">
+                Hey there.
+            </p>
+            <p>
+                I'm an undergraduate student majoring in Computer Science at the Georgia Institute of Technology,
+                specializing in the Intelligence and Information Internetworks threads.
+            </p>
+            <p>
+                I'm also an aspiring data scientist.
+                I love data, and enjoy analyzing it to predict trends and gain insights about our world.
+                Passionate about artificial intelligence and machine learning,
+                I'm always ready to engage in conversations about how these fields are revolutionizing our lives.
+            </p>
+            <p>
+                In my free time, I enjoy building mobile applications, going to hackathons and giving talks at meetups.
+                You can check out some of my <a href="/projects/">projects</a> and <a href="/talks/">talks</a>.
+            </p>
+            <p>
+                I am currently interning at <a href="http://vitallabs.co">Vital Labs</a>, where I'm working to improve the analysis of photoplethysmogram data.
+                I'm also a True Fellow this summer with <a href="https://trueventures.com">True Ventures</a>.
+            </p>
+			<p>
+                If you'd like a copy of my CV, you can get it <a href="/cv/">here</a>.
+			</p>
+		</div>
 
 </div>

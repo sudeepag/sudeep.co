@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
+    border-top: 5px solid $blue;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
@@ -237,6 +237,78 @@
 
         @include media-query($on-laptop) {
             font-size: 18px;
+        }
+    }
+}
+
+/**
+ * Introduction
+ */
+
+$intro-header-padding:     10px;
+.intro {
+
+    .intro-title {
+    display:        table;
+    overflow:       hidden;
+    width:          100%;
+    float:          left;
+    font-size:      15px;
+    margin-bottom:  25px;
+
+        .intro-col {
+            display:        table-cell;
+            width:          50%;
+            vertical-align: middle;
+
+            .name {
+                color: $blue;
+                font-weight: 500;
+                font-size: $base-font-size + 1px;
+            }
+
+            .location {
+                color: $grey-color;
+            }
+        }
+
+        .intro-col-1 {
+            padding-right: $intro-header-padding;
+            text-align: right;
+        }
+
+        .intro-col-2 {
+            padding-left: $intro-header-padding;
+            text-align: left;
+        }
+
+        .profile-picture {
+            width: 120px;
+            border-radius: 60px;
+        }
+    }
+
+    .intro-summary {
+        text-align: justify;
+        text-justify: inter-word;
+        .intro-intro {
+            font-weight: 400;
+        }
+        p:last-child {
+            margin: 0;
+        }
+
+        // @include isPhone() {
+        //     text-align: left;
+        // }
+    }
+
+    .intro-links {
+        text-align: center;
+        padding-bottom: 20px;
+        .intro-link-item {
+            padding-left: 5px;
+            padding-right: 5px;
         }
     }
 }
