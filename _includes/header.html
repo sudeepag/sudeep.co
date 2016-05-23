@@ -4,6 +4,24 @@
 
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
+    {% if page.title %}
+        {% assign isPost = false %}
+        {% for post in site.posts %}
+            {% if post.url == page.url %}
+                {% assign isPost = true %} <!-- "site.pages contains page" won't work -->
+                {% break %}
+            {% endif %}
+        {% endfor %}
+
+        <span class="page-title">
+            {% if isPost == false %}
+                {{ page.title }}
+            {% else %}
+                Post
+            {% endif %}
+        </span>
+    {% endif %}
+
     <nav class="site-nav">
       <a href="#" class="menu-icon">
         <svg viewBox="0 0 18 15">
@@ -15,9 +33,9 @@
 
       <div class="trigger">
         {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
+            {% if my_page.title %}
+            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+            {% endif %}
         {% endfor %}
       </div>
     </nav>

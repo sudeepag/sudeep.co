@@ -3,4 +3,22 @@ title: Blog
 layout: default
 permalink: /blog/
 ---
-    
+
+{% if site.posts != empty %}
+    <ul class="post-list">
+        {% for post in site.posts %}
+    	    <li>
+    	       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    	       <span class="post-meta">{{ post.date | date: "%b %-d, %Y at %I:%M %p" }}</span>
+    	       <p>
+    	           {{ post.excerpt | strip_html }}<a href="{{ post.url | prepend: site.baseurl }}">...read more</a>
+    	       </p>
+    	   </li>
+        {% endfor %}
+    </ul>
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+{% else %}
+    <div style="text-align: center">
+        I'm currently working on some posts. They'll be up soon!
+    </div>
+{% endif %}
