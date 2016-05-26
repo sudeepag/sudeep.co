@@ -376,6 +376,11 @@ $intro-header-padding:     10px;
  */
 .projects {
 
+    code {
+        font-size: $base-font-size - 4px;
+        font-weight: 500;
+    }
+
     ul {
         list-style: none;
         margin: 0;
