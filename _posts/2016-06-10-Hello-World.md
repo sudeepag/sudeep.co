@@ -1,7 +1,7 @@
 ---
 title: Hello World
 layout: post
-date: 2016-06-10 00:09:49 +GMT
+date: 2016-06-09 00:09:49 +GMT
 author: Sudeep Agarwal
 ---
 
@@ -15,4 +15,4 @@ I’d like to think that I’m in the most exciting phase of my life thus far. H
 
 3. I’m interning as a data scientist at a cutting edge health startup where I get to work with real data and solve real problems. I’m learning so much everyday by interacting with entrepreneurs and gaining valuable insight into how a startup functions. 
 
-Over the summer, I hope to write about all of these things, along with random musings about the things I see and read, or the places I visit. I also hope to work on a couple of data analytics projects, which I will be tracking as blog posts over the course of the summer.
+Over the summer, I hope to write about all of these things, along with random musings about the things I see and read, or the places I visit. I also hope to work on a couple of data analytics projects, the progress of which I will be tracking in blog posts over the course of the summer.
