@@ -498,3 +498,38 @@ $intro-header-padding:     10px;
     }
 
 }
+
+.experience {
+    img {
+        float: left;
+        margin-top: 3px;
+        padding-right: 8px;
+        display: inline-block;
+        width: 24px;
+    }
+
+    >div {
+        margin-top: 20px;
+
+        .experience-title {
+            display: inline-block;
+            margin-bottom: 7px;
+            font-size: 11pt;
+            font-weight: 600;
+        }
+
+        .company-name {
+            display: inline-block;
+            margin-bottom: 3px;
+            font-weight: 400;
+        }
+    }
+}
+
+.experience-grey {
+    color: #737373;
+}
+
+.experience-light-grey {
+    color: #A7A7A7;
+}
