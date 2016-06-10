@@ -1,15 +1,33 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% capture day %}{{ page.date | date: "%-d" }}{% endcapture %}
+    {% capture dayLastTwoDigits %}{{ day | modulo: 100 }}{% endcapture %}
+    {% if dayLastTwoDigits >= "11" and dayLastTwoDigits <= "13" %}
+      {% assign ordinal = "th" %}
+    {% else %}
+      {% capture dayLastDigit %}{{ day | modulo: 10 }}{% endcapture %}
+      {% case dayLastDigit %}
+        {% when "1" %}
+          {% assign ordinal = "st" %}
+        {% when "2" %}
+          {% assign ordinal = "nd" %}
+        {% when "3" %}
+          {% assign ordinal = "rd" %}
+        {% else %}
+          {% assign ordinal = "th" %}
+      {% endcase %}
+    {% endif %}
+    {% capture ordinalDay %}{{ day | append: ordinal }}{% endcapture %}
+    <p class="post-meta">{{ page.date | date: "%I:%M %p on %A" }} {{ ordinalDay }} {{ page.date | date: "of %b, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <article class="post-content">
     {{ content }}
-  </div>
+  </article>
 
-</article>
+</div>
