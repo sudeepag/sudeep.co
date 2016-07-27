@@ -182,6 +182,7 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+    font-size: 15px;
 }
 
 .page-heading {
@@ -257,6 +258,10 @@
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+
+    code {
+        font: 12px Monaco;
     }
 }
 
