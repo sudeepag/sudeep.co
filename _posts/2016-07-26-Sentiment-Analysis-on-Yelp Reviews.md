@@ -5,9 +5,9 @@ date: 2016-07-26 00:35:00 +GMT
 author: Sudeep Agarwal
 ---
 
-![banner](/images/post_images/2016-07-26-Sentiment-Analysis-on-Yelp Reviews/banner.png)
-
 I was looking for public datasets to explore the other day, and I ran into Yelp's dataset from the [Yelp Dataset Challenge](https://www.yelp.com/dataset_challenge). After poking around the data, I realized that it was a treasure trove of data for local businesses -- it had around 2.4GB of data and invaluable information ranging from details like location and opening hours of the businesses, to user reviews about service and quality of food.
+
+![banner](/images/post_images/2016-07-26-Sentiment-Analysis-on-Yelp Reviews/banner.png)
 
 There are five different datasets:
 
