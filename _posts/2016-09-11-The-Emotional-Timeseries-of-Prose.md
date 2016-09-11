@@ -45,11 +45,16 @@ I used [LabMT](http://journals.plos.org/plosone/article/asset?unique&id=info:doi
 
 We can easily load all of this information by reading it into a `pandas` dataframe for later reference and converting the average happiness column it to a dictionary for quickly looking it up when we're building our scoring system. 
 
-    import pandas as pd
 
-    url = # url for labmt dataset (linked above)
-    labmt = pd.read_csv(url, skiprows=2, sep='\t', index_col=0)
-    labmt_dict = labmt.happiness_average.to_dict()
+{% highlight python %}
+import pandas as pd
+
+url = # url for labmt dataset (linked above)
+labmt = pd.read_csv(url, skiprows=2, sep='\t', index_col=0)
+labmt_dict = labmt.happiness_average.to_dict()
+{% endhighlight %}
+
+    
 
 #### Creating the Emotional Timeseries
 The methodology for creating the sentiment score was inspired by Reagan's paper. A sliding window approach is used to obtain the emotional content of groups of 10,000 word windows. The text is first broken up into segments of uniform length. This length is appropriately calculated to generate a hundred points of data by sliding the window across the text, incrementing by the segment length in every iteration. 
@@ -60,18 +65,22 @@ The methodology for creating the sentiment score was inspired by Reagan's paper.
 
 To obtain the appropriately segmented blocks of text, we first read in the text file, clean it up a bit and split it into a list of words.
 
-    import re
+{% highlight python %}
+import re
 
-    with open('Lord Of the Flies.txt', 'r') as f:
-    	text = re.sub('[^a-z\ \']+', " ",  f.read().lower())
-    	words = list(text.split())
+with open('Lord Of the Flies.txt', 'r') as f:
+	text = re.sub('[^a-z\ \']+', " ",  f.read().lower())
+	words = list(text.split())
+{% endhighlight %}
 
 We can then identify an appropriate segment length `Ns` that will give us a hundred data points for the timeseries.
 
-    N = len(words)
-    Nw = 10000 # window size
-    n = 100 # no. of data points
-    Ns = int((N - (Nw + 1)) / n) # size of each segment
+{% highlight python %}
+N = len(words)
+Nw = 10000 # window size
+n = 100 # no. of data points
+Ns = int((N - (Nw + 1)) / n) # size of each segment
+{% endhighlight %}
 
 This segment length allows us to create our sliding window that iterates across segments. In this process, we also calculate the average happiness score of each 10,000 word window by taking into account both the happiness scores of the individual words as indicated by the LabMT dataset, as well as their normalized frequencies within the word window. 
 
@@ -83,20 +92,22 @@ This can be represented by the function above which calculate the average happin
 
 With this knowledge, we can then define a scoring function that takes in a list of words and returns the average sentiment (the data point in the timeseries) for each window. 
 
-    from nltk.corpus import stopwords
-    from nltk.probability import FreqDist
+{% highlight python %}
+from nltk.corpus import stopwords
+from nltk.probability import FreqDist
 
-    def score(words):
-        total_freq = 0.0
-        ave_sentiment = 0.0
-        filtered_words = [word for word in words if word not in stopwords.words('english')]
-        freq = FreqDist(filtered_words)
-        total_freq = sum([freq[word] for word in filtered_words])
-        for word in words:
-        	sentiment_score = labmt_dict.get(word, 0)
-          	norm_freq = freq[word] / total_freq
-          	ave_sentiment += sentiment_score * norm_freq
-        return ave_sentiment
+def score(words):
+    total_freq = 0.0
+    ave_sentiment = 0.0
+    filtered_words = [word for word in words if word not in stopwords.words('english')]
+    freq = FreqDist(filtered_words)
+    total_freq = sum([freq[word] for word in filtered_words])
+    for word in words:
+    	sentiment_score = labmt_dict.get(word, 0)
+      	norm_freq = freq[word] / total_freq
+      	ave_sentiment += sentiment_score * norm_freq
+    return ave_sentiment
+{% endhighlight %}
 
 We first analyze the set of words to remove any *stopwords* that might skew our results. Stopwords are words that are commonly removed from input terms when processing natural language data as they do not contain important significance to the text. Some examples are *the*, *and*, *me*, etc. NLTK, a great library for natural language processing in Python, has a handy collection of common stopwords.
 
@@ -104,13 +115,15 @@ We can then create a frequency distribution of the filtered words to calculate t
 
 With the sliding windows and average happiness scores, we can construct an emotional timeseries that describes the average sentiment of the book as it progresses. 
 
-    timeseries = []
-    for idx, i in enumerate(range(Nw, N, Ns)):
-           window = words[i-Nw:i]
-           timeseries.append(score(window))
-           
-    timeseries = np.array(timeseries)
-    relative_ts = timeseries - timeseries.mean()
+{% highlight python %}
+timeseries = []
+for idx, i in enumerate(range(Nw, N, Ns)):
+       window = words[i-Nw:i]
+       timeseries.append(score(window))
+       
+timeseries = np.array(timeseries)
+relative_ts = timeseries - timeseries.mean()
+{% endhighlight %}
 
 By subtracting the mean of the timeseries, we can find the progression of relative sentiment scores and we can understand more clearly how the different sections of the text relate positively or negatively to each other.
 
@@ -130,19 +143,21 @@ This looks much more promising. We can now see that there are certain well-defin
 
 To find the start and end positions of each chapter, I search through the text for occurrences of *Chapter One*, *Chapter Two* and so on, and mark the boundaries for each chapter. 
 
-    from num2words import num2words
-    import itertools
+{% highlight python %}
+from num2words import num2words
+import itertools
 
-    def get_chapter_idxs(words):
-    	chapters = []
-    	numwords = [num2words(i) for i in range(1,100)]
-    	for i, word in enumerate(words):
-    		if words[i] == 'chapter' and words[i+1] in numwords :
-    		    chapters.append(i+2)
-    	chapters.append(len(words))
-    	a, b = itertools.tee(chapters)
-    	next(b, None)
-    	return zip(a, b)
+def get_chapter_idxs(words):
+	chapters = []
+	numwords = [num2words(i) for i in range(1,100)]
+	for i, word in enumerate(words):
+		if words[i] == 'chapter' and words[i+1] in numwords :
+		    chapters.append(i+2)
+	chapters.append(len(words))
+	a, b = itertools.tee(chapters)
+	next(b, None)
+	return zip(a, b)
+ {% endhighlight %}
 
 `num2words` allows me to put this logic into a loop and convert the numbers to equivalent words. With `itertools` and `zip`, I generate a list of `(start, end)` tuples that demarcate the boundaries of each chapter. Let's use this information to mark out the sections in the earlier plot and label them accordingly.
 

@@ -40,15 +40,17 @@ The review dataset contains the following attributes -- `type`, `business_id`, `
 
 Let's start off by reading the data and processing it into a [pandas](http://pandas.pydata.org) dataframe:
 
+{% highlight python %}
+import pandas as pd
 
-	import pandas as pd
+with open('yelp_academic_dataset_review.json', 'r') as f:
+	data = f.readlines()
+data = map(lambda x: x.rstrip(), data)
+data_json_str = "[" + ','.join(data) + "]"
+df = pd.read_json(data_json_str)
+df[['stars','text']].head(10)
+{% endhighlight %}
 
-	with open('yelp_academic_dataset_review.json', 'r') as f:
-    	data = f.readlines()
-	data = map(lambda x: x.rstrip(), data)
-	data_json_str = "[" + ','.join(data) + "]"
-	df = pd.read_json(data_json_str)
-	df[['stars','text']].head(10)
 
 This should output the first ten entries of the dataset, displaying only the `stars` and `text` columns.
 
@@ -62,20 +64,21 @@ Note that if you run `len(df.index)`, you'll realize that there are *2,225,213* 
 
 Let's set up the training and testing sets.
 
+{% highlight python %}
+# Generate training data
+train_labels = []
+train_data = df['text'].head(2000).tolist()
+for n in df['stars'].head(2000).as_matrix():
+	res = 'pos' if n > 3 else 'neg'
+	train_labels.append(res)
 
-	# Generate training data
-	train_labels = []
-	train_data = df['text'].head(2000).tolist()
-	for n in df['stars'].head(2000).as_matrix():
-    	res = 'pos' if n > 3 else 'neg'
-    	train_labels.append(res)
-
-	# Generate testing data
-	test_labels = []
-	test_data = df['text'].tail(2000).tolist()
-	for n in df['stars'].tail(2000).as_matrix():
-    	res = 'pos' if n > 3 else 'neg'
-    	test_labels.append(res)
+# Generate testing data
+test_labels = []
+test_data = df['text'].tail(2000).tolist()
+for n in df['stars'].tail(2000).as_matrix():
+	res = 'pos' if n > 3 else 'neg'
+	test_labels.append(res)
+{% endhighlight %}
 
 The `train_data` and `test_data` contain the text of the reviews while the `train_labels` and `test_labels` contain their corresponding categories. If the review has more than three stars, we label it as positive sentiment, or *pos*. If the review has three or fewer stars, we label it as negative sentiment, or *neg*.
 
@@ -83,18 +86,21 @@ The `train_data` and `test_data` contain the text of the reviews while the `trai
 
 In classification, items are represented by their features. In the case of classifying Yelp reviews, our features will be the words that make up the reviews. We use a 'bag of words' representation, where we build a dictionary using the words from the set and count the number of occurrences of each word. The [scikit-learn](http://scikit-learn.org/stable/) library has several vectorizers to translate a document to feature vectors. The `CountVectorizer` is a handy tool that helps us build up a dictionary of features.
 
-	from sklearn.feature_extraction.text import CountVectorizer
+{% highlight python %}
+from sklearn.feature_extraction.text import CountVectorizer
 
-	count_vect = CountVectorizer()
-	train_counts = count_vect.fit_transform(train_data)
+count_vect = CountVectorizer()
+train_counts = count_vect.fit_transform(train_data)
+{% endhighlight %}
 
 Having the occurrences of each feature is great, but knowing their frequencies within a document is even more insightful. For example, knowing that a word occurs a hundred times in a short document is more insightful than knowing it occurs the same number of times in a much longer document. We can also downscale the weights for common words that appear in multiple documents and are therefore less informative. [TF-IDF](https://en.wikipedia.org/wiki/Tf–idf), or term frequency-inverse document frequency, is a common way to the tag the words with the right weights by looking at the frequency of their occurrence.
 
+{% highlight python %}
+from sklearn.feature_extraction.text import TfidfTransformer
 
-	from sklearn.feature_extraction.text import TfidfTransformer
-
-	tfidf_transformer = TfidfTransformer()
-	train_tfidf = tfidf_transformer.fit_transform(train_counts)
+tfidf_transformer = TfidfTransformer()
+train_tfidf = tfidf_transformer.fit_transform(train_counts)
+{% endhighlight %}
 
 Once we have all the weighted features, the next step is to start training the classifier.
 
@@ -104,7 +110,9 @@ The next step is to actually perform the sentiment analysis with this data. Ther
 
 In scikit-learn, training a multinomial naive Bayes classifier is as simple as a single line of code.
 
-	clf = MultinomialNB().fit(train_tfidf, train_labels)
+{% highlight python %}
+clf = MultinomialNB().fit(train_tfidf, train_labels)
+{% endhighlight %}
 
 This fits our data using the categories we labeled the reviews with. We now have a trained classifier!
 
@@ -112,27 +120,31 @@ This fits our data using the categories we labeled the reviews with. We now have
 
 Remember that testing set we created earlier? It's time to put our classifier to the test using that set.
 
-	test_counts = count_vect.transform(test_data)
-	test_tfidf = tfidf_transformer.transform(test_counts)
-	predicted = clf.predict(test_tfidf)
-	print('%.1f%%' % (np.mean(predicted == test_labels) * 100))
-	
-	>> '89.5%'
+{% highlight python %}
+test_counts = count_vect.transform(test_data)
+test_tfidf = tfidf_transformer.transform(test_counts)
+predicted = clf.predict(test_tfidf)
+print('%.1f%%' % (np.mean(predicted == test_labels) * 100))
+
+>> '89.5%'
+{% endhighlight %}
 
 We're using the classifier that we training to predict what the sentiment of the reviews in the test data is, and comparing that to the actual sentiment that we labelled them as at the start of this tutorial. Turns out that the classifier is correct *89.5%* of the time, which isn't *too* bad for a naive Bayes classifier.
 
 You can also test the classifier you just trained on any text to see how it performs.
 
 
-	docs = ['this is an awesome review', 'this is a terrible review']
-	counts = count_vect.transform(docs)
-	tfidf = tfidf_transformer.transform(counts)
-	predicted = clf.predict(tfidf)
-	for doc, category in zip(docs, predicted):
-	    print('%r => %s' % (doc, category))
+{% highlight python %}
+docs = ['this is an awesome review', 'this is a terrible review']
+counts = count_vect.transform(docs)
+tfidf = tfidf_transformer.transform(counts)
+predicted = clf.predict(tfidf)
+for doc, category in zip(docs, predicted):
+    print('%r => %s' % (doc, category))
 
-	>> 'this is an awesome review' => pos
-	>> 'this is a terrible review' => neg
+>> 'this is an awesome review' => pos
+>> 'this is a terrible review' => neg
+{% endhighlight %}
 
 # What's Next?
 
