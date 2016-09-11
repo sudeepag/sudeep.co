@@ -21,5 +21,3 @@ github_username:  sudeepag
 # Build settings
 markdown: kramdown
 highlighter: rouge
-gems:
-  - jemoji

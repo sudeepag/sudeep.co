@@ -230,9 +230,10 @@
 .post-content {
     word-break: break-word;
     margin-bottom: $spacing-unit;
+    font: Verdana;
 
     h1, h2, h3, h4, h5, h6, {
-        margin-top: 50px;
+        margin-top: 25px;
         margin-bottom: 10px;
     }
 
@@ -261,8 +262,9 @@
     }
 
     code {
-        font: 12px Monaco;
+        font: 13px Droid Sans Mono;
     }
+
 }
 
 /**
