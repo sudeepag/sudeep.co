@@ -1,5 +1,5 @@
 ---
-title: The Emotional Timeseries of Prose (Part I)
+title: The Emotional Timeseries of Prose
 layout: post
 date: 2016-09-11 10:35:00 +GMT
 author: Sudeep Agarwal
