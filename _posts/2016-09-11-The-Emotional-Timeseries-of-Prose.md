@@ -166,7 +166,7 @@ I then create a summary of key events in each chapter of the book.<br/>
 
 If you compare this summary of key events with the plot we just created, you can see that the average sentiment works *pretty* well. Especially so when you consider the fact that all we're analyzing here is binary sentiment and effectively just the choice of words in the writing. We see peaks at events like the first creation of the fire, and the acting out of the pig hunt which brings the boys closer together. The troughs are at places where we'd expect, such as when key characters like Simon and Piggy are killed off. What's interesting is that we can also see some pattern around where the tone of the story starts to change - like when we being seeing visible differences to Jack's character, and when Simon has the conversation with the pig's head.
 
-### The Ancienct Art of Storytelling
+### The Ancient Art of Storytelling
 
 I think that what's been done here is conceptually very interesting. We've managed to quantitatively analyze the emotional structure of a story and how it changes as the story progresses. By creating a 'sentiment score', we've attached a value and magnitude to emotion - an objective outlook on a subjective feeling, a non-traditional way to think about storytelling. 
 
