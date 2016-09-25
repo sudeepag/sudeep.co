@@ -17,6 +17,7 @@ url: "http://sudeep.co" # the base hostname & protocol for your site
 exclude: [README.md, CNAME]
 twitter_username: sudeeeeeep
 github_username:  sudeepag
+disqus_shortname: sudeep135
 
 # Build settings
 markdown: kramdown

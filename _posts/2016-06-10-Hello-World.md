@@ -1,6 +1,7 @@
 ---
 title: Hello World
 layout: post
+comments: true
 date: 2016-06-09 00:09:49 +GMT
 author: Sudeep Agarwal
 ---

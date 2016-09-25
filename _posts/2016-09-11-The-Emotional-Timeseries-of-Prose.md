@@ -1,6 +1,7 @@
 ---
 title: The Emotional Timeseries of Prose
 layout: post
+comments: true
 date: 2016-09-11 10:35:00 +GMT
 author: Sudeep Agarwal
 ---

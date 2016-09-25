@@ -1,6 +1,7 @@
 ---
 title: Sentiment Analysis on Yelp Reviews
 layout: post
+comments: true
 date: 2016-07-26 00:35:00 +GMT
 author: Sudeep Agarwal
 ---
