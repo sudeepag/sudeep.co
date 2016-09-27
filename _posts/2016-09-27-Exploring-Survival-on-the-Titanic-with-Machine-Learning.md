@@ -6,11 +6,11 @@ date: 2016-09-27 10:00:00 +GMT
 author: Sudeep Agarwal
 ---
 
+In the early morning of 15 April 1912, a British passenger liner sank in the North Atlantic Ocean after colliding with an iceberg. More than  1,500 passengers died in the sinking, making it one of the deadliest maritime disasters. Since then, the Titanic has become one of the most famous ships in history, her memory kept alive in various forms of pop culture, museums, books and films.
+
 <div align="center">
   <img src="/images/post_images/2016-09-27-Exploring-Survival-on-the-Titanic-with-Machine-Learning/titanic.gif">
 </div><br/>
-
-In the early morning of 15 April 1912, a British passenger liner sank in the North Atlantic Ocean after colliding with an iceberg. More than  1,500 passengers died in the sinking, making it one of the deadliest maritime disasters. Since then, the Titanic has become one of the most famous ships in history, her memory kept alive in various forms of pop culture, museums, books and films.
 
 We can use machine learning to explore some interesting questions. How much of role did a passenger's socio-economic status play on their chance of survival? Did their name or age make a difference? What about siblings, parents or children? Is one of these factors more significant than the rest? Using decision trees and a random forest model, we can analyze the passenger data from the ship, answer some of these interesting questions and create a classifier that can predict if a passenger survived the tragedy.
 
