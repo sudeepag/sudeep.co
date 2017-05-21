@@ -1,24 +1,18 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
 
-# Site settings
-title: sudeep.co
-email: sudeep135@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://sudeep.co" # the base hostname & protocol for your site
-exclude: [README.md, CNAME]
-twitter_username: sudeeeeeep
-github_username:  sudeepag
-disqus_shortname: sudeep135
+# Permalinks
+permalink:        pretty
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
+# Setup
+title:            sudeep.co
+tagline:          'A Jekyll theme'
+description:      'Data science enthusiast, aspiring entrepreneur, interested in AI, Machine Learning and NLP'
+url:              http://sudeep.co
+baseurl:          /
+
+paginate:         5
+excerpt_separator: <!--more-->
+
+gems: [jekyll-gist, jekyll-paginate]

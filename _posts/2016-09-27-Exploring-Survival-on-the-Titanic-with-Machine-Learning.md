@@ -13,14 +13,14 @@ In the early morning of 15 April 1912, a British passenger liner sank in the Nor
 </div><br/>
 
 We can use machine learning to explore some interesting questions. How much of role did a passenger's socio-economic status play on their chance of survival? Did their name or age make a difference? What about siblings, parents or children? Is one of these factors more significant than the rest? Using decision trees and a random forest model, we can analyze the passenger data from the ship, answer some of these interesting questions and create a classifier that can predict if a passenger survived the tragedy.
-
+<!--more-->
 ### Data Exploration
 The dataset I'll be working with in this blog post is from the [Kaggle competition](https://www.kaggle.com/c/titanic) *Titanic: Machine Learning from Disaster*, which is conveniently classified into training and testing data. But before we start working on our classifier, let's first attempt to understand and visualize the data.
 
-If you load the training data into a `pandas` dataframe, you'll realize that there are 12 columns. 
+If you load the training data into a `pandas` dataframe, you'll realize that there are 12 columns.
 
 - `survival` A flag indicating if the passenger survived the sinking  (0 = No; 1 = Yes)
-- `pclass` The passenger's cabin class, which is an indication of socio-economic status (1 = 1st; 2 = 2nd; 3 = 3rd) 
+- `pclass` The passenger's cabin class, which is an indication of socio-economic status (1 = 1st; 2 = 2nd; 3 = 3rd)
 - `name` Passenger's name
 - `sex` Passenger's gender
 - `age` Passenger's age
@@ -37,15 +37,15 @@ Let's first take a look at the demographics of the population to understand the 
 
 From the plot, we can see that the majority of the passengers were adults between the ages of 18 and 35. The mean age turns out be 29.7, with the most common age being 24. In total, there were 577 males and 314 females in this particular dataset, which explains why the number of males seems to be higher than females on average in each age group.
 
-Let's analyze the average survival rate of the passengers between age and social class groups. 
+Let's analyze the average survival rate of the passengers between age and social class groups.
 
 <iframe width="800" height="400" frameborder="0" scrolling="no" src="https://plot.ly/~sagarwal88/228.embed"></iframe>
 
-This is an interpolated heatmap of average survival rate for each age and social class group. We can see a very interesting trend here - as the age increases and the passenger class decreases (recall that class 1 is the best, and class 3 is the worst), the average survival rate decreases. In fact, the average survival rate for the worst passenger class is generally lower than that of the best passenger class. This brings up an interesting discussion about social class, and points us in a direction where we can ask our next question. 
+This is an interpolated heatmap of average survival rate for each age and social class group. We can see a very interesting trend here - as the age increases and the passenger class decreases (recall that class 1 is the best, and class 3 is the worst), the average survival rate decreases. In fact, the average survival rate for the worst passenger class is generally lower than that of the best passenger class. This brings up an interesting discussion about social class, and points us in a direction where we can ask our next question.
 
 ### How Much Does Social Class Matter in a Disaster?
 
-In any disaster or tragedy, every split second makes a difference. Each decision made could be the difference between life and death.  As the Titanic sank, who was allowed on to the life rafts, and who wasn't, largely determined who lived and who died. This brings up an interesting discussion about social class, and if that was a factor in determining who was allowed on to the life rafts. 
+In any disaster or tragedy, every split second makes a difference. Each decision made could be the difference between life and death.  As the Titanic sank, who was allowed on to the life rafts, and who wasn't, largely determined who lived and who died. This brings up an interesting discussion about social class, and if that was a factor in determining who was allowed on to the life rafts.
 
 Were the passengers who had paid a higher fare, and lived in a higher class cabin allowed to board the life rafts before the passengers who had bought the cheapest tickets? If so, is this trend visible in the survival rates for each cabin class? Let's take a look.
 
@@ -59,17 +59,17 @@ We've seen that social class did in fact affect a passenger's chances of surviva
 
 ### Random Forests in Machine Learning
 
-In any prediction problem, there are several approaches you can take to build your classifier. One category of approaches is called *ensemble learning*, which involves the combination of several models to solve a single prediction problem. The notion behind ensemble learning is that if we make a prediction using each individual model, and then combine all of these predictions, we get a prediction that would be as good or better than each of the individual predictions. 
+In any prediction problem, there are several approaches you can take to build your classifier. One category of approaches is called *ensemble learning*, which involves the combination of several models to solve a single prediction problem. The notion behind ensemble learning is that if we make a prediction using each individual model, and then combine all of these predictions, we get a prediction that would be as good or better than each of the individual predictions.
 
 Random forest is a type of ensemble learning that is commonly used for *feature selection*. In machine learning, we often want to know which features, or variables, are the most significant. In the case of the Titanic dataset, we can use random forests to find out which variable affected a passenger's survival the most, and which factor had almost no effect on the survival. Before we do that though, let's briefly take a look at how random forests work.
 
-Using random samples from the data, we first construct decision trees, which are graphs that model decisions and their possible consequences. 
+Using random samples from the data, we first construct decision trees, which are graphs that model decisions and their possible consequences.
 
 <div align="center">
   <img src="/images/post_images/2016-09-27-Exploring-Survival-on-the-Titanic-with-Machine-Learning/decisiontree.png" width="600px">
 </div><br/>
 
-In the decision tree above, for example, if an observation has a length less than 50, has blue eyes and 2 legs, it is going to be classified as *red*. In the case of our Titanic dataset, we can create similar decision trees with variables like the passenger's age and gender, the fare they paid, whether they were in a family or had children, and their social class. The labels, in this case, would simply be binary flags indicating if the passenger survived or not. 
+In the decision tree above, for example, if an observation has a length less than 50, has blue eyes and 2 legs, it is going to be classified as *red*. In the case of our Titanic dataset, we can create similar decision trees with variables like the passenger's age and gender, the fare they paid, whether they were in a family or had children, and their social class. The labels, in this case, would simply be binary flags indicating if the passenger survived or not.
 
 <div align="center">
   <img src="/images/post_images/2016-09-27-Exploring-Survival-on-the-Titanic-with-Machine-Learning/randomforest.png">

@@ -15,7 +15,7 @@ That escalated quickly. The debate had shifted from programming syntactic sugar 
 >@ArtOfWarfare is correct, ‘#’ is an octothorpe. And ‘*’ is a hexathorpe, ‘+’ is a quadrathorpe, and ‘-’ is a duothorpe. Philosophical question: what is a thorpe? — @Pierre
 
 Which led me to question, where does the symbol really come from? And what in the world is a thorpe?
-
+<!--more-->
 ### What’s an Octo-thorpe?
 
 Well, nobody can agree for sure where the term came from, but ancient cartography seems to suggest that octothorpe is in fact the combination of two terms — octo and thorp (this explanation was later endorsed by the New Scientist). Octo simply refers to eight and thorp is an Old English word for village, probably because the symbol looks like a village square surrounded by eight equally sized fields. It was first coined in the early 1960s by an employee of Bell Laboratories, Don Macpherson, who thought that the company needed a more scientific term for the symbol when it was trying to sell a more complicated phone system to the client. 

@@ -1,36 +1,29 @@
 ---
 layout: default
 ---
+
 <div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    {% capture day %}{{ page.date | date: "%-d" }}{% endcapture %}
-    {% capture dayLastTwoDigits %}{{ day | modulo: 100 }}{% endcapture %}
-    {% if dayLastTwoDigits >= "11" and dayLastTwoDigits <= "13" %}
-      {% assign ordinal = "th" %}
-    {% else %}
-      {% capture dayLastDigit %}{{ day | modulo: 10 }}{% endcapture %}
-      {% case dayLastDigit %}
-        {% when "1" %}
-          {% assign ordinal = "st" %}
-        {% when "2" %}
-          {% assign ordinal = "nd" %}
-        {% when "3" %}
-          {% assign ordinal = "rd" %}
-        {% else %}
-          {% assign ordinal = "th" %}
-      {% endcase %}
-    {% endif %}
-    {% capture ordinalDay %}{{ day | append: ordinal }}{% endcapture %}
-    <p class="post-meta">{{ page.date | date: "%I:%M %p on %A" }} {{ ordinalDay }} {{ page.date | date: "of %b, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
-  {% include disqus_comments.html %}
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">{{ page.date | date_to_string }}</span>
+  <span class="post-readtime">{% include read_time.html %}</span>
 
 
+  {{ content }}
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+        <h3>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
 </div>

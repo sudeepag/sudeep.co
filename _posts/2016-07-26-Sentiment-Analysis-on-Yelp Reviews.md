@@ -23,7 +23,7 @@ There are five different datasets:
 - `yelp_academic_dataset_user` is the user information dataset. It contains information such as how many votes the user got, the number of reviews the user wrote, as well as other information like friends, average ratings and so on.
 
 That is a *lot* of data. I'm getting excited just by the possibility of exploring and learning from all this information. I thought I'd start off by doing something relatively simple - a sentiment analysis on Yelp reviews by training a multinomial naive Bayes classifier.
-
+<!--more-->
 # What is Sentiment Analysis?
 
 **Sentiment analysis** is 'the process of computationally identifying and categorizing opinions expressed in a piece of text, especially in order to determine whether the writer's attitude towards a particular topic, product, etc., is positive, negative, or neutral.'
