@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-09-11 10:35:00 +GMT
 author: Sudeep Agarwal
-category: Sentiment-Analysis
+category: sentiment-analysis
 ---
 
 Nearly twenty years ago, Kurt Vonnengut, an American author perhaps most famously known for his satirical novel Slaughterhouse-Five, gave a lecture that would change the way we think about stories. Standing in front of a blackboard, chalk in hand, he proclaims, "There's no reason why the simple shapes of stories can't be fed into computers; they are beautiful shapes." He then proceeds to plot a cosine curve, and amidst applause and laughter, playfully declares, "People love this story!"

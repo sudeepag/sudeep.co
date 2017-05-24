@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-06-10 00:35:00 +GMT
 author: Sudeep Agarwal
-category: Musings
+category: musings
 ---
 
 The ideas for my writing come from the strangest of places. This one began when I was searching for the syntactically correct way to comment out a block of code in Python. I came across this Stack Overflow link, which mentioned everything I expected it would, until I came across the following witty discussion on the # symbol. 
