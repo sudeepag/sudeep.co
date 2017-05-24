@@ -1,18 +1,22 @@
 ---
 layout: default
-title: Blog
 ---
 
 {% for category in site.categories %}
+    {% assign cat = category | first %}
+    {% if cat == page.category %}
+    <div class="content-tag active">
+        <a href="{{ base.url }}/{{ category | first }}">{{ category | first | replace: '-',' '}}</a>
+    </div>
+    {% else %}
     <div class="content-tag inactive">
         <a href="{{ base.url }}/{{ category | first }}">{{ category | first | replace: '-',' '}}</a>
     </div>
+    {% endif %}
 {% endfor %}
 
-<!-- {% unless forloop.last %},{% endunless %} -->
-
 <div class="posts">
-  {% for post in paginator.posts %}
+  {% for post in site.categories.[page.category] %}
   <div class="post">
     <h1 class="post-title">
       <a href="{{ post.url }}">

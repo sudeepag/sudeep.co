@@ -4,6 +4,7 @@ layout: post
 comments: true
 date: 2016-06-09 00:09:49 +GMT
 author: Sudeep Agarwal
+category: Musings
 ---
 
 I’ve been meaning to get back into writing (I say that as if I used to write consistently, except I never did). So I guess it’s more accurate to say that I intend to get into the habit of writing. 

@@ -4,6 +4,7 @@ layout: post
 comments: true
 date: 2016-09-27 10:00:00 +GMT
 author: Sudeep Agarwal
+category: Machine-Learning
 ---
 
 In the early morning of 15 April 1912, a British passenger liner sank in the North Atlantic Ocean after colliding with an iceberg. More than  1,500 passengers died in the sinking, making it one of the deadliest maritime disasters. Since then, the Titanic has become one of the most famous ships in history, her memory kept alive in various forms of pop culture, museums, books and films.

@@ -5,3 +5,4 @@ gem "jekyll-paginate"
 gem "jekyll-gist"
 gem "redcarpet"
 gem "pygments.rb"
+gem 'jekyll-archives'

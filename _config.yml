@@ -3,11 +3,11 @@ markdown:         redcarpet
 highlighter:      pygments
 
 # Permalinks
-permalink:        pretty
+permalink:        /:categories/:title/
 
 # Setup
 title:            sudeep.co
-tagline:          'A Jekyll theme'
+tagline:          'sudeep.co'
 description:      'Data science enthusiast, aspiring entrepreneur, interested in AI, Machine Learning and NLP'
 url:              http://sudeep.co
 baseurl:          /

@@ -45,8 +45,6 @@ html {
   }
 }
 
-
-
 /*
  * Sidebar
  *
@@ -161,6 +159,36 @@ a.sidebar-nav-item:focus {
     margin-left: 22rem;
     margin-right: 4rem;
   }
+}
+
+.content-tag.active {
+    font-size: 0.85rem;
+    background: #5a5a5a;
+    color: #FFF;
+    border-radius: 1rem;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
+    display:inline-block;
+}
+
+.content-tag.inactive {
+    font-size: 0.85rem;
+    background: #202020;
+    color: #FFF;
+    border-radius: 1rem;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 2rem;
+    display:inline-block;
+}
+
+.content-tag a {
+    color: white;
+}
+
+.content-tag a:hover {
+    text-decoration: none;
 }
 
 

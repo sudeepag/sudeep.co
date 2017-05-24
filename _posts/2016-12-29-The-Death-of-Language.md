@@ -4,6 +4,7 @@ layout: post
 comments: true
 date: 2016-12-29 10:00:00 +GMT
 author: Sudeep Agarwal
+category: 'Data-Visualization'
 ---
 
 *"The wisdom of humanity is coded in language."*
