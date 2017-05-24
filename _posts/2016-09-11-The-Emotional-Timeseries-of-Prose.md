@@ -8,7 +8,7 @@ category: sentiment-analysis
 ---
 
 Nearly twenty years ago, Kurt Vonnengut, an American author perhaps most famously known for his satirical novel Slaughterhouse-Five, gave a lecture that would change the way we think about stories. Standing in front of a blackboard, chalk in hand, he proclaims, "There's no reason why the simple shapes of stories can't be fed into computers; they are beautiful shapes." He then proceeds to plot a cosine curve, and amidst applause and laughter, playfully declares, "People love this story!"
-<!--more-->
+
 ### Those Who Tell the Stories Rule the World
 
 The notion Vonnengut explores is an interesting one - can we quantitatively look at writing to understand how it is emotionally structured? When we read, we feel emotionally connected to the writing. We get so 'lost' in the fictional world and fall so deep into it that our own emotions become mapped to the narrative. In fact, narrative transportation theory in psychology studies exactly this. The [quantitative meta-analysis](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2033192) by Van Laer, De Ruyter, Visconti and Wetzels on the effects of narrative transportation allude to readers 'mentally enter(ing) a world that a story evokes'. We feel what we read, and being able to understand how these emotions vary over the course of a story is, I think, an extremely interesting intellectual pursuit.
@@ -20,7 +20,7 @@ Many of these questions were inspired by the [research](http://arxiv.org/pdf/160
 ![arcs](/images/post_images/2016-09-11-The-Emotional-Timeseries-of-Prose/arcs.png)
 
 As an avid reader, this research really fascinates me. In this multi-part blog series, I will try to understand the concept of an emotional timeseries in a piece of literature, and how it is affected by various factors. In future posts, I will attempt to address some of the more interesting questions that I brought up earlier.
-
+<!--more-->
 ### Understanding Emotional Structure
 
 To fully understand the emotional structure of a piece of text, we need to break it down to its most fundamental element - the word. Each word can be analyzed for its sentiment, it's relationship with the other words around it and how these factors change as the text progresses. Sentiment in this example, and in natural language processing in general, is often binary; it is either positive or negative. By analyzing how the average sentiment varies in a text, we can get a somewhat representative idea of the text's emotion. A block of text that describes a fight between the proganist and antagonist, for example, is likely to have a more negative sentiment than one that describes how a character feels when exploring a new world.
