@@ -5,6 +5,7 @@ comments: true
 date: 2017-05-24 01:00:00 +GMT
 author: Sudeep Agarwal
 categories: ['machine-learning', 'sentiment-analysis']
+image: 'http://sudeep.co/images/post_images/2017-05-25-Visualizing-My-Music-Taste-using-Machine-Learning-and-Sentiment-Analysis/df.png'
 ---
 
 <div align='center'>
@@ -20,7 +21,7 @@ Music is a complicated thing. No one fully understands why we're drawn towards a
 
 This connection between cognitive processing and musical preference is very interesting to me. Having never truly understood my affinity towards certain genres of music and hatred towards some others, I was inspired to attempt to quantify my music taste using data, to really understand the similarities and differences along the music that I listen to. More interestingly, I was excited to apply concepts from machine learning such as clustering and unsupervised learning, and from natural language processing such as sentiment analysis, to this project and understand what insights this might produce. I've also wanted to explore Spotify's API for some time now, and this proved to be the perfect opportunity to do so.
 
-And yes, each title in this blog post will be a song from my dataset. 
+And yes, each title in this blog post will be a song from my dataset.
 
 <!--more-->
 
@@ -140,13 +141,13 @@ Each subplot above describes the distribution of the labelled feature in my data
 
 This trend is corroborated by the distribution of acousticness, which shows a preference for songs with low acousticness and with high acousticness, as evident by the two peaks. Energy, however, seems to be skewed right, which indicates that I prefer songs with higher energy. Since energy is an predictor of intensity, perhaps I am more drawn towards more intense indie tracks, as opposed to the softer, quieter ones. This, again, is supported by the loudness distribution, which shows a strong preference for louder music.
 
-I very rarely listen to rap music, and this preference is supported by the distribution of speechiness, which seems to be skewed heavily to the left. Instrumentalness also shares a similar distribution, possibly due to the infrequency of classical music in my dataset. I do, however, have some instrumental music (soundtrack, electronic, etc) in the dataset, and this is reflected by the small spikes across higher instrumentalness values. 
+I very rarely listen to rap music, and this preference is supported by the distribution of speechiness, which seems to be skewed heavily to the left. Instrumentalness also shares a similar distribution, possibly due to the infrequency of classical music in my dataset. I do, however, have some instrumental music (soundtrack, electronic, etc) in the dataset, and this is reflected by the small spikes across higher instrumentalness values.
 
-The next question I wanted to answer was how my music taste compared to what the rest of the world was listening to. I repeated the same process with songs from the [Today's Top Hits](https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXcBWIGoYBM5M) playlist on Spotify to see how the distributions for the various audio features compared to the ones for my own top tracks. 
+The next question I wanted to answer was how my music taste compared to what the rest of the world was listening to. I repeated the same process with songs from the [Today's Top Hits](https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXcBWIGoYBM5M) playlist on Spotify to see how the distributions for the various audio features compared to the ones for my own top tracks.
 
 ![Distribution](/images/post_images/2017-05-25-Visualizing-My-Music-Taste-using-Machine-Learning-and-Sentiment-Analysis/top_df.png)
 
-The distributions of my top tracks, as shown in the previous plot, are represented by the grey histogram and curve, whereas the distributions of the tracks from the Spotify top hits are represented in blue. The differences that these audio features highlight are very interesting. 
+The distributions of my top tracks, as shown in the previous plot, are represented by the grey histogram and curve, whereas the distributions of the tracks from the Spotify top hits are represented in blue. The differences that these audio features highlight are very interesting.
 
 For acousticness, there seems to be only one peak that is skewed left, indicating the lack of acoustic top hits. Not surprising - many of the top hits today tend to be formulaic, overproduced pop. Energy seems to be more normally distributed for the top hits, which could mean that I have a slight preference for energetic music. The trend for loudness and tempo seem to be rather similar, with the same skew to the right and left correspondingly. The mean tempo for the top hits, however, seems to be slightly lower, which could support the observation about energy. Danceability and valence again, have a similar distribution for the top hits, but seem to have a higher mean, whereas instrumentalness and speechiness remain rather similar.
 
@@ -160,11 +161,11 @@ Next, let's see if we can apply some machine learning to our data.
 
 <h3>Another Story • <i>The Head and the Heart</i></h3>
 
-Given the multi-dimensional nature of our data (where each feature represents a dimension of the data point), it is difficult to visualize or concisely describe each data point. We often perform [dimensionality reduction](http://www.math.uwaterloo.ca/~aghodsib/courses/f06stat890/readings/tutorial_stat890.pdf) to reduce the number of features while maintaining the reproducibility of the data. There are several approaches to doing this, such as feature selection (such as the ID3 algorithm which uses information gain) and feature transformation (which creates new features). [Principal Component Analysis](http://setosa.io/ev/principal-component-analysis/) (PCA) is a method of feature transformation that finds orthogonal dimensions with the highest variance i.e. the first principal component will have the largest variance, the second will have the second largest and so on. In this context, PCA will allow us to summarize our data into two dimensions so that we can plot it on an x-y scale. 
+Given the multi-dimensional nature of our data (where each feature represents a dimension of the data point), it is difficult to visualize or concisely describe each data point. We often perform [dimensionality reduction](http://www.math.uwaterloo.ca/~aghodsib/courses/f06stat890/readings/tutorial_stat890.pdf) to reduce the number of features while maintaining the reproducibility of the data. There are several approaches to doing this, such as feature selection (such as the ID3 algorithm which uses information gain) and feature transformation (which creates new features). [Principal Component Analysis](http://setosa.io/ev/principal-component-analysis/) (PCA) is a method of feature transformation that finds orthogonal dimensions with the highest variance i.e. the first principal component will have the largest variance, the second will have the second largest and so on. In this context, PCA will allow us to summarize our data into two dimensions so that we can plot it on an x-y scale.
 
 ![PCA Plot](/images/post_images/2017-05-25-Visualizing-My-Music-Taste-using-Machine-Learning-and-Sentiment-Analysis/plot1.png)
 
-As you can see from the annotated scatter plot above, my music taste is largely consistent within the two dimensions that capture the variance amongst the audio features. However, there are some outliers which don't fall within the cluster of points. Some of the songs that stand out the most include [X by LVNDSCAPE](https://open.spotify.com/track/2kJjD8d6Ygn3jKuuAhI0CI), [Vladimir's Blues by Max Richter](https://open.spotify.com/track/370TxU3tPIvVLmCrGd2EZ6) and [Beyond This Moment by Patrick O'Hearn](https://open.spotify.com/track/54QFGiOthVqXeJtiXdlLYa). Interestingly, most of these outliers happen to be from a playlist I created called Focus, which I listen to when I'm studying and contains only soft, instrumental music. 
+As you can see from the annotated scatter plot above, my music taste is largely consistent within the two dimensions that capture the variance amongst the audio features. However, there are some outliers which don't fall within the cluster of points. Some of the songs that stand out the most include [X by LVNDSCAPE](https://open.spotify.com/track/2kJjD8d6Ygn3jKuuAhI0CI), [Vladimir's Blues by Max Richter](https://open.spotify.com/track/370TxU3tPIvVLmCrGd2EZ6) and [Beyond This Moment by Patrick O'Hearn](https://open.spotify.com/track/54QFGiOthVqXeJtiXdlLYa). Interestingly, most of these outliers happen to be from a playlist I created called Focus, which I listen to when I'm studying and contains only soft, instrumental music.
 
 That's pretty amazing - if you remember, the original data contained no information about the playlist that it came from, and only had the audio features like danceability and acousticness. PCA condensed all that information into two dimensions to show how different these songs are from something like [Indian Summer by Jai Wolf](https://open.spotify.com/track/42nkVBjWYVhiijbof5zySm), which is closer to the origin. Indian Summer, while instrumental as well, is electronic and much more upbeat, and it's really cool how analyzing these features and using machine learning allowed us to visually see the difference.
 
@@ -172,21 +173,21 @@ We can take this one step further to construct a model that finds these outliers
 
 ![SVM Plot](/images/post_images/2017-05-25-Visualizing-My-Music-Taste-using-Machine-Learning-and-Sentiment-Analysis/plot2.png)
 
-The anomalies highlighted by the SVM are in red, while the remaining data points are in green. This type of model can be really powerful, and can be used to provide more accurate music recommendations. If a song falls within the green cluster, I'm probably going to like it more. 
+The anomalies highlighted by the SVM are in red, while the remaining data points are in green. This type of model can be really powerful, and can be used to provide more accurate music recommendations. If a song falls within the green cluster, I'm probably going to like it more.
 
 But so far we've only been analyzing the audio features of songs, and we already see that we can gain so much insight. However a song that sounds happy doesn't always contain cheerful lyrics, and the lyrics that a song contains also play a large role in determining our preference for the song. Could we perhaps use natural language processing, and in particular sentiment analysis, to reveal the general sentiment of a song, and apply this to reveal more about my musical preferences?
 
 <h3>Lights Out, Words Gone • <i>Bombay Bicycle Club</i></h3>
 
-In 2005, Russell, et al. published a paper titled [*The circumplex model of affect: An integrative approach to affective neuroscience, cognitive development, and psychopathology*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2367156/), which introduced the four quadrants of emotional affect across the dimensions of arousal and valence - happy and content, sad and anxious. 
+In 2005, Russell, et al. published a paper titled [*The circumplex model of affect: An integrative approach to affective neuroscience, cognitive development, and psychopathology*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2367156/), which introduced the four quadrants of emotional affect across the dimensions of arousal and valence - happy and content, sad and anxious.
 
 <div align='center'>
 	<img width='400px' src ='/images/post_images/2017-05-25-Visualizing-My-Music-Taste-using-Machine-Learning-and-Sentiment-Analysis/quadrants.jpg'>
 </div>
 
-In March 2017, Çano and Morisio published [*MoodyLyrics: A Sentiment Annotated Lyrics Dataset*](http://dl.acm.org/citation.cfm?id=3059340&dl=ACM&coll=DL&CFID=766606185&CFTOKEN=87457547), which analyzed the arousal and valence of the words in song lyrics to label them with one of the four categories from Russell's model - happy, sad, relaxed and angry. The [MoodyLyrics dataset](http://softeng.polito.it/erion/MoodyLyrics.zip) contains 2,000 labelled songs and is processed to be balanced (each class has approximately the same number of instances) to avoid bias. To assess the sentiment of my own music, I trained a model using this labelled data, and tested it on the dataset constructed earlier. Henceforth, I will refer to the MoodyLyrics data as the *training* dataset and the data of my top music as the *testing* dataset. 
+In March 2017, Çano and Morisio published [*MoodyLyrics: A Sentiment Annotated Lyrics Dataset*](http://dl.acm.org/citation.cfm?id=3059340&dl=ACM&coll=DL&CFID=766606185&CFTOKEN=87457547), which analyzed the arousal and valence of the words in song lyrics to label them with one of the four categories from Russell's model - happy, sad, relaxed and angry. The [MoodyLyrics dataset](http://softeng.polito.it/erion/MoodyLyrics.zip) contains 2,000 labelled songs and is processed to be balanced (each class has approximately the same number of instances) to avoid bias. To assess the sentiment of my own music, I trained a model using this labelled data, and tested it on the dataset constructed earlier. Henceforth, I will refer to the MoodyLyrics data as the *training* dataset and the data of my top music as the *testing* dataset.
 
-To retrieve the lyrics for the songs in both datasets, I used a library called [pylyrics3](https://github.com/jameswenzel/pylyrics3), which scrapes lyrics off [LyricWikia](http://lyrics.wikia.com) given an input of a song title and artist. I then cleaned and processed the lyrics to remove any stopwords (like *a*, *the*, etc), non-letter characters, and transformed all the words into lower case characters. 
+To retrieve the lyrics for the songs in both datasets, I used a library called [pylyrics3](https://github.com/jameswenzel/pylyrics3), which scrapes lyrics off [LyricWikia](http://lyrics.wikia.com) given an input of a song title and artist. I then cleaned and processed the lyrics to remove any stopwords (like *a*, *the*, etc), non-letter characters, and transformed all the words into lower case characters.
 
 Once I had two clean datasets, I used a [Bag of Words](https://ongspxm.github.io/blog/2014/12/bag-of-words-natural-language-processing/) approach to create a numeric representation of the data. The Bag of Words model is commonly used in NLP to learn the vocabulary of documents and count the frequency of each word. By using [scikit-learn's](http://scikit-learn.org/stable/) vectorizer, I transformed both the datasets into matrices of shape `(x, y)`, where `x` represents the number of instances or songs, and `y` represents the number of features or words created by the vectorizer.
 
@@ -235,7 +236,7 @@ To train the model, I used [random forests](https://www.stat.berkeley.edu/~breim
     <tr>
       <th>5</th>
       <td>Mykonos</td>
-      <td>Fleet Foxes</td>	
+      <td>Fleet Foxes</td>
       <td>whoa oh oh oh oh oh oh oh oh oh oh oh oh oh oh...</td>
       <td>relaxed</td>
     </tr>
@@ -262,4 +263,3 @@ This has been one of my most interesting projects because I got the chance to in
 <iframe src="https://open.spotify.com/embed/user/1178997413/playlist/2sVEFVSq8fWIZKLnOVi0Bk" width="800" height="400" frameborder="0" allowtransparency="true"></iframe><br>
 <sub><sup><i>A playlist with all the songs featured in the titles</i></sup></sub>
 </div>
-
