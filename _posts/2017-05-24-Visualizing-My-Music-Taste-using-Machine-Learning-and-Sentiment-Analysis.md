@@ -252,7 +252,7 @@ The jittered scatterplot on the left allows us to see the distribution of probab
 To summarize,
 
 * The happy songs that I like tend to be **strongly happy**
-* I might have a bias towards songs with **relaxing** lyrics
+* I might have a preference for songs with **relaxing** lyrics
 
 <h3>Le départ • <i>Damien Fleau</i></h3>
 
