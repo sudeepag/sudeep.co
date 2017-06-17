@@ -13,7 +13,7 @@ image: 'http://sudeep.co/images/post_images/2017-06-17-How-to-Build-Your-Develop
 </div>
 <br>
 
-Over the past couple of weeks, a number of friends approached me to ask how I had set up my website. I told them about I'd created the site using Jekyll and hosted it on Github Pages, but I had to host my web apps on Heroku because Github Pages only serves static content, and I also needed a database so I had to connect the web apps to Firebase...
+Over the past couple of weeks, a number of friends approached me to ask how I had set up my website. I told them I'd created the site using Jekyll and hosted it on Github Pages, but I had to host my web apps on Heroku because Github Pages only serves static content, and I also needed a database so I had to connect the web apps to Firebase...
 
 And it struck me how inefficient my development stack was. I started wondering if I could do any better, and so this post is the result of completely recreating this stack from scratch in the cloud. There are a lot of great tutorials out there for each of the topics I'll be discussing, so this post does not intend to replicate any of those but instead provides an insightful collection of resources to hopefully give an idea of what a cloud computing setup entails.
 
@@ -32,7 +32,7 @@ We live in the age of cloud computing - every like, every tweet, every click. So
 
 Cloud computing is also *instant*. With a click of a button, you can scale your application across the world, adding cloud instances in New York, Bangalore or Singapore. The modular nature of cloud computing has encouraged businesses, startups, and even hobbyist developers, to make the switch. Need more processing power? Upgrade your cloud instance to one with a higher performance. Need more space? Connect a storage volume to your instance. And if you don't need it anymore, simply turn it off.
 
-I think that by now, I've conviced you why it makes so much sense to both move your development to the cloud, and also streamline it onto a single platform. For the remainder of this post, I hope to briefly describe the approach that I took to do this. This approach is by no means the *best*, and as mentioned, there are plenty of different tools and services to do the same thing - but I'll try to make the case for my stack.
+I think that by now, I've convinced you why it makes so much sense to both move your development to the cloud, and also streamline it onto a single platform. For the remainder of this post, I hope to briefly describe the approach that I took to do this. This approach is by no means the *best*, and as mentioned, there are plenty of different tools and services to do the same thing - but I'll try to make the case for my stack.
 
 ### The Development Stack
 
