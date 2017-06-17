@@ -2,7 +2,7 @@
 title: How to Build Your Development Stack in the Cloud from Scratch
 layout: post
 comments: true
-date: 2017-06-16 01:00:00 +GMT
+date: 2017-06-17 00:00:00 +GMT
 author: Sudeep Agarwal
 categories: ['cloud-computing']
 image: 'http://sudeep.co/images/post_images/2017-06-17-How-to-Build-Your-Development-Stack-in-the-Cloud-from-Scratch/stack.png'
