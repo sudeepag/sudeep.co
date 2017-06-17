@@ -13,9 +13,9 @@ image: 'http://sudeep.co/images/post_images/2017-06-17-How-to-Build-Your-Develop
 </div>
 <br>
 
-Over the past couple of weeks, a number of friends had approached me to ask about how I had set up my website. I told them about how I had created the site using Jekyll and hosted it on Github Pages, but I had to host my web app on Heroku because Github Pages only serves static content, and I also needed a database to I had to connect it to Firebase... 
+Over the past couple of weeks, a number of friends approached me to ask how I had set up my website. I told them about I'd created the site using Jekyll and hosted it on Github Pages, but I had to host my web apps on Heroku because Github Pages only serves static content, and I also needed a database so I had to connect the web apps to Firebase...
 
-And it struck me how inefficient my development stack was. I started thinking if I could do any better, and so this post is the result of me completely recreating this stack from scratch and moving it to the cloud. There are a lot of great tutorials out there, so this post does not intend to replicate any of those but instead provides an insightful collection of resources to hopefully give an idea of what a cloud computing setup entails.
+And it struck me how inefficient my development stack was. I started wondering if I could do any better, and so this post is the result of completely recreating this stack from scratch in the cloud. There are a lot of great tutorials out there for each of the topics I'll be discussing, so this post does not intend to replicate any of those but instead provides an insightful collection of resources to hopefully give an idea of what a cloud computing setup entails.
 
 <!--more-->
 
