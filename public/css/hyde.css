@@ -373,3 +373,46 @@ a.sidebar-nav-item:focus {
 .share-button.google-plus svg {
   fill: #DB4437;
 }
+
+/* PROJECTS */
+
+.project-title {
+    /*display: inline;*/
+    z-index: 1;
+}
+
+.project-img {
+  border: solid 1px #ccc;
+  height: 80px;
+  margin-bottom: .5em;
+  width: 720px;
+}
+
+.project-tags {
+    /*background-color: blue;*/
+    width: 720px;
+    height: 35px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: -1;
+}
+
+.project-tag {
+    /*color: #636363;*/
+    /*font-family: "PT Sans", sans-serif;*/
+    /*font-size: smaller;*/
+    /*margin: 2px 0 0 480px;*/
+    /*margin-left: 700px;*/
+    /*position: absolute;
+    text-align: right;*/
+    /*width: 240px;*/
+    background-color: #ececec;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.project-tag:hover {
+    text-decoration: none;
+}
