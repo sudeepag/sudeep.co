@@ -8,9 +8,9 @@ categories: ['cloud-computing']
 image: 'http://sudeep.co/images/post_images/2017-06-17-How-to-Build-Your-Development-Stack-in-the-Cloud-from-Scratch/stack.png'
 ---
 
-<div align='center'>
-<img width="700px" src="/images/post_images/2017-06-17-How-to-Build-Your-Development-Stack-in-the-Cloud-from-Scratch/stack.png">
-</div>
+<!--<div align='center'>-->
+<img width="800px" src="/images/post_images/2017-06-17-How-to-Build-Your-Development-Stack-in-the-Cloud-from-Scratch/stack.png">
+<!--</div>-->
 <br>
 
 Over the past couple of weeks, a number of friends approached me to ask how I had set up my website. I told them I'd created the site using Jekyll and hosted it on Github Pages, but I had to host my web apps on Heroku because Github Pages only serves static content, and I also needed a database so I had to connect the web apps to Firebase...
