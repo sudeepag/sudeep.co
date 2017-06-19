@@ -22,7 +22,7 @@ And it struck me how inefficient my development stack was. I started wondering i
 ### Spoilt for Choice
 In today's open-source landscape, there are an unimaginable number of libraries and frameworks for each task. Want to create a website with minimal effort? Use a drag-and-drop site creator like [Wix](https://www.wix.com/), [Weebly](https://www.weebly.com/), or [Wordpress](https://wordpress.com/), or maybe purchase some hosting on [GoDaddy](https://www.godaddy.com/) or [Namecheap](https://www.namecheap.com/) and let them do all the work. What about a web application? Use one of the million frameworks like [Meteor](https://www.meteor.com/), [Flask](http://flask.pocoo.org/) or [Django](https://www.djangoproject.com/). Then go ahead and host it on something like [Heroku](https://www.heroku.com/) or [PythonAnywhere](https://www.pythonanywhere.com/). Need a backend for the app? Connect it to [Firebase](https://firebase.google.com/). 
 
-Building and hosting something simple on the web today has become at once simple and complex. Not only is it time consuming to explore all of these different services - creating accounts, setting them up, maintaing the services, it is also **expensive**. Hosting on Namecheap can cost nearly *$40 a year*, a backend on Firebase *$25 a month*, and application hosting on Heroku anything from *$25 to $500 a month per instance*. If you're a hobbyist developer or a student trying to create an online presence like me, it just doesn't make any sense to pay that much.
+Building and hosting something simple on the web today has become at once simple and complex. Not only is it time consuming to explore all of these different services - creating accounts, setting them up, maintaing the services, it is also **expensive**. Hosting on Namecheap can cost nearly *$40 a year*, a backend on Firebase *$25 a month*, and application hosting on Heroku anything from *$25 to $500 a month per instance*. If you're a hobbyist developer or a student trying to host your work online like me, it just doesn't make any sense to pay that much.
 
 ### Built for the Cloud
 
@@ -32,7 +32,7 @@ We live in the age of cloud computing - every like, every tweet, every click. So
 
 Cloud computing is also *instant*. With a click of a button, you can scale your application across the world, adding cloud instances in New York, Bangalore or Singapore. The modular nature of cloud computing has encouraged businesses, startups, and even hobbyist developers, to make the switch. Need more processing power? Upgrade your cloud instance to one with a higher performance. Need more space? Connect a storage volume to your instance. And if you don't need it anymore, simply turn it off.
 
-I think that by now, I've convinced you why it makes so much sense to both move your development to the cloud, and also streamline it onto a single platform. For the remainder of this post, I hope to briefly describe the approach that I took to do this. This approach is by no means the *best*, and as mentioned, there are plenty of different tools and services to do the same thing - but I'll try to make the case for my stack.
+I think that by now, I've convinced you why it makes so much sense to both move your development to the cloud, and also streamline it onto a single platform. For the remainder of this post, I hope to briefly describe the approach that I took to do this. This approach is by no means the *best*, and as mentioned, there are plenty of different tools and services to do the same thing - but I'll try to make the case for the stack I used and why I thought it worked the best for my use case.
 
 ### The Development Stack
 
@@ -60,20 +60,20 @@ This is where you register your domain name - in my case, *sudeep.co*. Again, th
 **My Pick: NameCheap**
 
 * **Excellent Support**<br>
-One of the best things about Namecheap is their live chat. If I'm ever stuck on a hosting or DNS issue, I can instantly chat with one of their representatives to get live support instead of search on StackOverflow for hours.
+One of the best things about Namecheap is their live chat. If I'm ever stuck on a hosting or DNS issue, I can instantly chat with one of their representatives to get live support instead of searching on StackOverflow for hours.
 
 **Get Started: [Register a New Domain](https://www.namecheap.com/domains.aspx)**
 
 
 
 #### 3. Web Server
-Once you have a cloud instance and domain, you need a web server to load your content. Web servers control how users access the hosted files using HTTP, which is the protocol that your browser uses to view web pages. With a web server, you can point different web applications to different ports. This makes your cloud instance very powerful - the same web server can serve multiple domains, subdomains and various web applications, allowing you to consolidate all your development.
+Once you have a cloud instance and domain, you need a web server to load your content. Web servers control how users access the hosted files using HTTP, which is the protocol that your browser uses to view web pages. With a web server, you can point different web applications to different ports. This makes your cloud instance very powerful - the same web server can serve multiple domains, subdomains and various web applications, allowing you to consolidate all your development and hosting.
 
 <div align='center'>
 <img width="400px" src="/images/post_images/2017-06-17-How-to-Build-Your-Development-Stack-in-the-Cloud-from-Scratch/web-server.svg">
 </div>
 
-Two of the most common open source web servers are [Apache](https://httpd.apache.org/) and [Nginx](https://nginx.org/en/), and both are solid options. Apache has been around for a really long time, and has great documentation and support. However, it follows a one-server-does-all model, which can sometimes struggle as web pages become richer, causing it to gain a reputation of being bloated. Nginx, which follows an [event-driven architecture](https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/), was created to solve many of these problems. Naturally, I decided to go with Nginx.
+Two of the most common open source web servers are [Apache](https://httpd.apache.org/) and [Nginx](https://nginx.org/en/), and both are solid options. Apache has been around for a really long time, and has great documentation and support. However, it follows a one-server-does-all model, which can sometimes struggle with richer web pages, causing it to be bloated. Nginx, which follows an [event-driven architecture](https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/), was created to solve many of these problems. Naturally, I decided to go with Nginx.
 
 **My Pick: Nginx**
 
