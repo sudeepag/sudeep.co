@@ -53,7 +53,7 @@ One of the steps that is often forgotten in this stage, causing a lot of problem
 
 
 
-###4. Data Exploration
+### 4. Data Exploration
 
 Now that you've got a sparkling clean set of data, you're ready to finally get started in your analysis. The data exploration stage is like the brainstorming of data analysis. This is where you understand the patterns and bias in your data. It could involve pulling up and analyzing a random subset of the data using Pandas, plotting a histogram or distribution curve to see the general trend, or even creating an interactive visualization that lets you dive down into each data point and explore the story behind the outliers. 
 
@@ -65,7 +65,7 @@ There is a great summary of tools and approaches on the Wikipedia page for explo
 
 
 
-###5. Feature Engineering
+### 5. Feature Engineering
 
 In machine learning, a feature is a measurable property or attribute of a phenomenon being observed. If we were predicting the scores of a student, a possible feature is the amount of sleep they get. In more complex prediction tasks such as character recognition, features could be histograms counting the number of black pixels. 
 
@@ -81,7 +81,7 @@ Feature construction involves creating new features from the ones that you alrea
 
 
 
-###6. Predictive Modeling
+### 6. Predictive Modeling
 
 Predictive modeling is where the machine learning finally comes into your data science project. I use the term predictive modeling because I think a good project is not one that just trains a model and obsesses over the accuracy, but also uses comprehensive statistical methods and tests to ensure that the outcomes from the model actually make sense and are significant. Based on the questions you asked in the business understanding stage, this is where you decide which model to pick for your problem. This is never an easy decision, and there is no single right answer. The model (or models, and you should always be testing several)  that you end up training will be dependent on the size, type and quality of your data, how much time and computational resources you are willing to invest, and the type of output you intend to derive. There are a couple of different cheat sheets available online which have a flowchart that helps you decide the right algorithm based on the type of classification or regression problem you are trying to solve. The two that I really like are the [Microsoft Azure Cheat Sheet](https://docs.microsoft.com/en-us/azure/machine-learning/studio/algorithm-cheat-sheet) and [SAS Cheat Sheet](https://blogs.sas.com/content/subconsciousmusings/2017/04/12/machine-learning-algorithm-use/).
 
@@ -93,7 +93,7 @@ For classification models, we often test accuracy using PCC (percent correct cla
 
 
 
-###7. Data Visualization
+### 7. Data Visualization
 
 Data visualization is a tricky field, mostly because it seems simple but it could possibly be one of the hardest things to do well. That's because data viz combines the fields of communication, psychology, statistics, and art, with an ultimate goal of communicating the data in a simple yet effective and visually pleasing way. Once you've derived the intended insights from your model, you have to represent them in way that the different key stakeholders in the project can understand. 
 
@@ -103,7 +103,7 @@ Again, this is a topic that could be a blog post on its own, so instead of divin
 
 
 
-###8. Business Understanding
+### 8. Business Understanding
 
 Phew. Now that you've gone through the entire lifecycle, it's time to go back to the drawing board. Remember, this is a *cycle*, and so it's an iterative process. This is where you evaluate how the success of your model relates to your original business understanding. Does it tackle the problems identified? Does the analysis yield any tangible solutions? If you encountered any new insights during the first iteration of the lifecycle (and I assure you that you will), you can now infuse that knowledge into the next iteration to generate even more powerful insights, and unleash the power of data to derive phenomenal results for your business or project.
 
