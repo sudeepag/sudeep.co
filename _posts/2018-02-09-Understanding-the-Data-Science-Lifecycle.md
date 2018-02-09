@@ -61,7 +61,7 @@ Using all of this information, you start to form hypotheses about your data and 
 
 There is a great summary of tools and approaches on the Wikipedia page for exploratory data analysis.
 
-**Get started: **[Exploratory Data Analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis)
+**Get started:** [Exploratory Data Analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis)
 
 
 
