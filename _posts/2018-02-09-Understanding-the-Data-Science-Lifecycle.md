@@ -2,7 +2,7 @@
 title: Understanding the Data Science Lifecycle
 layout: post
 comments: true
-date: 2018-02-10 00:00:00 +GMT
+date: 2018-02-09 00:00:00 +GMT
 author: Sudeep Agarwal
 categories: ['data-science']
 ---
