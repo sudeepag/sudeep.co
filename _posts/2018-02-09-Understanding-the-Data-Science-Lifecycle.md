@@ -1,15 +1,19 @@
+---
 title: Understanding the Data Science Lifecycle
 layout: post
 comments: true
 date: 2018-02-09 00:00:00 +GMT
 author: Sudeep Agarwal
 categories: ['data-science']
+---
 
 Data science is quickly evolving to be one of the hottest fields in the technology industry. With rapid advancements in computational performance that now allow for the analysis of massive datasets, we can uncover patterns and insights about user behavior and world trends to an unprecedented extent.
 
 A common question I've heard from friends is "Data science sounds pretty cool - how do I get started?" And so what started out as an attempt to explain it to a friend who wanted to get started with [Kaggle](https://www.kaggle.com/) projects has culminated in this post where I'll give a brief overview of the various steps involved in a data science pipeline, and how you can get started in each one of them. As a disclaimer, there are countless interpretations to the lifecycle (and to what data science even is), and this is the understanding that I have built up through my reading and experience so far. Data science is a quickly evolving field, and its terminology is rapidly evolving with it. If there's something that you strongly disagree with, I'd love to hear about it!
 
-###1. Business Understanding
+<!--more-->
+
+### 1. Business Understanding
 
 The data scientists in the meeting room are the people who keep asking the 'why's. They're the people who want to ensure that every decision made in the company is supported by concrete data, and that it is guaranteed (with a high probability) to achieve results. Before you can even start on a data science project, it is critical that you understand the problem you are trying to solve. 
 
