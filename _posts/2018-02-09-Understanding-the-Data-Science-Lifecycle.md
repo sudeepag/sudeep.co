@@ -9,7 +9,7 @@ image: 'http://sudeep.co/images/post_images/2018-02-09-Understanding-the-Data-Sc
 ---
 
 <div align='center'>
-<img width="650px" src="/images/post_images/2018-02-09-Understanding-the-Data-Science-Lifecycle/chart.png">
+<img width="600px" src="/images/post_images/2018-02-09-Understanding-the-Data-Science-Lifecycle/chart.png">
 </div>
 <br>
 
