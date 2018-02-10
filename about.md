@@ -11,10 +11,10 @@ I'm also an aspiring data scientist. I love data, and enjoy analyzing it to pred
 
 In my free time, I enjoy working on projects, going to hackathons and giving talks at meetups. Check out some of my [projects](/projects).
 
-This past summer, I interned at [Vital Labs](https://www.linkedin.com/company-beta/6466164/), where I worked to improve the prediction and analysis of blood pressure data using sensors in smartphones. I was also a fellow with True Ventures in the [True Entrepreneur Corps](https://trueventures.com/tec/).
+Some of my experience includes working at [Vital Labs](https://www.linkedin.com/company-beta/6466164/) to improve the prediction of blood pressure using smartphone sensors, being a fellow with True Ventures in the [True Entrepreneur Corps](https://trueventures.com/tec/), and working as a data scientist at [Cisco Systems](http://www.cisco.com) in the Worldwide Sales Training team to build a model that predicts the effectiveness of sales representatives around the world. 
 
-This summer, I'm interning as a data scientist at [Cisco](http://www.cisco.com) in the Worldwide Sales Training team. I am currently exploring internship opportunities for Summer 2018.
+This summer, I am excited to be working at Apple, Inc. in the [Apple News](https://www.apple.com/news/) team.
 
 <p class="message">
-  Have an interesting idea for a project? <a href='mailto:sudeep135@gmail.com'>Let's build it!</a>
+  Have an interesting idea for a project? <a href='mailto:hello@sudeep.co'>Let's build it!</a>
 </p>

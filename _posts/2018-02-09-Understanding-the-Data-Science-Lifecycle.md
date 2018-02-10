@@ -5,17 +5,25 @@ comments: true
 date: 2018-02-09 00:00:00 +GMT
 author: Sudeep Agarwal
 categories: ['data-science']
+image: 'http://sudeep.co/images/post_images/2018-02-09-Understanding-the-Data-Science-Lifecycle/chart.png'
 ---
+
+<div align='center'>
+<img width="650px" src="/images/post_images/2018-02-09-Understanding-the-Data-Science-Lifecycle/chart.png">
+</div>
+<br>
 
 Data science is quickly evolving to be one of the hottest fields in the technology industry. With rapid advancements in computational performance that now allow for the analysis of massive datasets, we can uncover patterns and insights about user behavior and world trends to an unprecedented extent.
 
-A common question I've heard from friends is "Data science sounds pretty cool - how do I get started?" And so what started out as an attempt to explain it to a friend who wanted to get started with [Kaggle](https://www.kaggle.com/) projects has culminated in this post, in which I'll give a brief overview of the various steps involved in a data science pipeline, and how you can get started in each one of them. As a disclaimer, there are countless interpretations to the lifecycle (and to what data science even is), and this is the understanding that I have built up through my reading and experience so far. Data science is a quickly evolving field, and its terminology is rapidly evolving with it. If there's something that you strongly disagree with, I'd love to hear about it!
+With the influx of buzzwords in the field of data science and relevant fields, a common question I've heard from friends is *"Data science sounds pretty cool - how do I get started?"* And so what started out as an attempt to explain it to a friend who wanted to get started with [Kaggle](https://www.kaggle.com/) projects has culminated in this post. I'll give a brief overview of the seven steps that make up a data science lifecycle - business understanding, data mining, data cleaning, data exploration, feature engineering, predictive modeling, and data visualization. For each step, I will also provide some resources that I've found to be useful in my experience.
+
+As a disclaimer, there are countless interpretations to the lifecycle (and to what data science even is), and this is the understanding that I have built up through my reading and experience so far. Data science is a quickly evolving field, and its terminology is rapidly evolving with it. If there's something that you strongly disagree with, I'd love to hear about it!
 
 <!--more-->
 
 ### 1. Business Understanding
 
-The data scientists in the room are the people who keep asking the 'why's. They're the people who want to ensure that every decision made in the company is supported by concrete data, and that it is guaranteed (with a high probability) to achieve results. Before you can even start on a data science project, it is critical that you understand the problem you are trying to solve. 
+The data scientists in the room are the people who keep asking the why's. They're the people who want to ensure that every decision made in the company is supported by concrete data, and that it is guaranteed (with a high probability) to achieve results. Before you can even start on a data science project, it is critical that you understand the problem you are trying to solve. 
 
 According to [Microsoft Azure's blog](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/lifecycle-business-understanding), we typically use data science to answer five types of questions:
 
@@ -25,7 +33,7 @@ According to [Microsoft Azure's blog](https://docs.microsoft.com/en-us/azure/mac
 4. Is this weird? (anomaly detection)
 5. Which option should be taken? (recommendation)
 
-In this stage, you should also be identifying  the central objectives of your project by identifying the variables that need to be predicted. If it's a regression, it could be something like a sales forecast. If it's a clustering, it could be a customer profile. Understanding the power of data and how you can utilize it to derive results for your business by asking the right questions is more of an art than a science, and doing this well comes with a lot of experience. One short cut to gain this this experience is to read what other people have to say, which is why I'm going to suggest a bunch of books to get started.
+In this stage, you should also be identifying  the central objectives of your project by identifying the variables that need to be predicted. If it's a regression, it could be something like a sales forecast. If it's a clustering, it could be a customer profile. Understanding the power of data and how you can utilize it to derive results for your business by asking the right questions is more of an art than a science, and doing this well comes with a lot of experience. One shortcut to gaining this experience is to read what other people have to say about the topic, which is why I'm going to suggest a bunch of books to get started.
 
 **Get started:** [Data Science for Business](https://www.amazon.com/Data-Science-Business-Data-Analytic-Thinking/dp/1449361323), [Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are](https://www.amazon.com/Everybody-Lies-Internet-About-Really/dp/0062390856/ref=sr_1_1?s=books&ie=UTF8&qid=1518139673&sr=1-1&keywords=everybody+lies)
 
@@ -35,7 +43,7 @@ In this stage, you should also be identifying  the central objectives of your pr
 
 Now that you've defined the objectives of your project, it's time to start gathering the data. Data mining is the process of gathering your data from different sources. Some people tend to group data retrieval and cleaning together, but each of these processes is such a substantial step that I've decided to break them apart. At this stage, some of the questions worth considering are - what data do I need for my project? Where does it live? How can I obtain it? What is the most efficient way to store and access all of it?
 
-If all the data necessary for the project is packaged and handed to you, you've won the lottery. More often than not, finding the right data takes both time and effort. If the data lives in databases, your job is relatively simple - you can query the relevant data using SQL queries, or manipulated it using a dataframe tool like Pandas. However, if your data doesn't actually exist in a dataset, you'll need to scrape it. Beautiful Soup is a popular library used to scrape web pages for data. If you're working with a mobile app and want to track user engagement and interactions, there are countless tools that can be integrated within the app so that you can start getting valuable data from customers. Google Analytics, for example, allows you to define custom events within the app which can help you understand how your users behave and collect the corresponding data.
+If all the data necessary for the project is packaged and handed to you, you've won the lottery. More often than not, finding the right data takes both time and effort. If the data lives in databases, your job is relatively simple - you can query the relevant data using SQL queries, or manipulate it using a dataframe tool like Pandas. However, if your data doesn't actually exist in a dataset, you'll need to scrape it. Beautiful Soup is a popular library used to scrape web pages for data. If you're working with a mobile app and want to track user engagement and interactions, there are countless tools that can be integrated within the app so that you can start getting valuable data from customers. Google Analytics, for example, allows you to define custom events within the app which can help you understand how your users behave and collect the corresponding data.
 
 **Get started:** [MySQL](http://www.mysqltutorial.org/), [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/), [Google Analytics for Firebase](https://firebase.google.com/docs/analytics/)
 
@@ -57,7 +65,7 @@ One of the steps that is often forgotten in this stage, causing a lot of problem
 
 Now that you've got a sparkling clean set of data, you're ready to finally get started in your analysis. The data exploration stage is like the brainstorming of data analysis. This is where you understand the patterns and bias in your data. It could involve pulling up and analyzing a random subset of the data using Pandas, plotting a histogram or distribution curve to see the general trend, or even creating an interactive visualization that lets you dive down into each data point and explore the story behind the outliers. 
 
-Using all of this information, you start to form hypotheses about your data and the problem you are tackling. If you were predicted student scores for example, you could try visualizing the relationship between scores and sleep. If you were predicting real estate prices, you could perhaps plot the prices as a heat map on a spatial plot to see if you can catch any trends. 
+Using all of this information, you start to form hypotheses about your data and the problem you are tackling. If you were predicting student scores for example, you could try visualizing the relationship between scores and sleep. If you were predicting real estate prices, you could perhaps plot the prices as a heat map on a spatial plot to see if you can catch any trends. 
 
 There is a great summary of tools and approaches on the Wikipedia page for exploratory data analysis.
 
@@ -75,7 +83,7 @@ We typically perform two types of tasks in feature engineering - feature selecti
 
 Feature selection is the process of cutting down the features that add more noise than information. This is typically done to avoid the [curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality), which refers to the increased complexity that arises from high-dimensional spaces (i.e. way too many features). I won't go too much into detail here because this topic can be pretty heavy, but we typically use filter methods (apply statistical measure to assign scoring to each feature), wrapper methods (frame the selection of features as a search problem and use a heuristic to perform the search) or embedded methods (use machine learning to figure out which features contribute best to the accuracy).
 
-Feature construction involves creating new features from the ones that you already have (and possibly ditching the old ones). An example of when you might want to do this is when you have a continuous variable, but your domain knowledge informs you that you only really need an indicator variable based on a known threshold. For example, if you have a feature for age, but your model only cares about if a person is an adult or minor, you could threshold is at 18, and assign different categories to instances above and below that threshold. You could also merge multiple features to make them more informative by taking their sum, difference or product. For example, if you were predicted student scores and had features for the number of hours of sleep on each night, you might want to create a feature that denoted the average sleep that the student had instead.
+Feature construction involves creating new features from the ones that you already have (and possibly ditching the old ones). An example of when you might want to do this is when you have a continuous variable, but your domain knowledge informs you that you only really need an indicator variable based on a known threshold. For example, if you have a feature for age, but your model only cares about if a person is an adult or minor, you could threshold it at 18, and assign different categories to instances above and below that threshold. You could also merge multiple features to make them more informative by taking their sum, difference or product. For example, if you were predicted student scores and had features for the number of hours of sleep on each night, you might want to create a feature that denoted the average sleep that the student had instead.
 
 **Get started:** [Introduction to Feature Selection Methods](https://www.analyticsvidhya.com/blog/2016/12/introduction-to-feature-selection-methods-with-an-example-or-how-to-select-the-right-variables/),  [Feature Selection with sklearn](http://scikit-learn.org/stable/modules/feature_selection.html), [Best Practices for Feature Engineering](https://elitedatascience.com/feature-engineering-best-practices)
 
