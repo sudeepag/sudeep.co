@@ -119,6 +119,4 @@ Phew. Now that you've gone through the entire lifecycle, it's time to go back to
 
 ---
 
-
-
-If you think this helped your understanding of what a data science lifecycle is, feel free to share it with someone you think might benefit from reading it. I think that data science is a really exciting field that has immense potential to revolutionize the way we make decisions and uncover insights that were previously hidden, and speaking the language of data is a necessary skill in today's workplace, regardless of what field you're in. Let me know your thoughts in the comments!
+If you think this helped your understanding of what a data science lifecycle is, feel free to share it with someone you think might benefit from reading it. I think that data science is a really exciting field that has an immense potential to revolutionize the way we make decisions and uncover insights that were previously hidden, and I strongly believe that speaking the language of data is a necessary skill in today's workplace regardless of what field you're in.
