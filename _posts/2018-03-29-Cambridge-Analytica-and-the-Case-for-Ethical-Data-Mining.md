@@ -14,9 +14,9 @@ hidden: true
 </div>
 <br>
 
-It was recently made public that Cambridge Analytica, a political data firm hired by Trump's 2016 election campaign, gained access to the private information of more than *50 million* Facebook users. The data was collected through a personality survey app designed by Aleksandr Kogan, a psychology professor at Cambridge University, and scraped private information from users and even those of their friends. Using this data, the firm allegedly identified the personalities of American voters and influenced their behavior.
+It was recently made public that Cambridge Analytica, a political data firm hired by Trump's 2016 election campaign, gained access to the private information of more than *50 million* Facebook users. The data was collected through a personality survey app designed by Aleksandr Kogan, a psychology professor at Cambridge University. The app scraped private information not only from the users of the app, but even that of their Facebook friends. Using this data, the firm allegedly identified the personalities of American voters and influenced their behavior.
 
-What's interesting here is that Facebook claims this was not a data breach. In their [press release](https://newsroom.fb.com/news/2018/03/suspending-cambridge-analytica/) suspending the Cambridge Analytica from Facebook, VP Paul Grewal wrote
+What's interesting here is that Facebook claims this was not a data breach. In a [press release](https://newsroom.fb.com/news/2018/03/suspending-cambridge-analytica/) suspending Cambridge Analytica from Facebook, VP Paul Grewal wrote
 
 > The claim that this is a data breach is completely false. Aleksandr Kogan requested and gained access to information from users who chose to sign up to his app, and everyone involved gave their consent. People knowingly provided their information, no systems were infiltrated, and no passwords or sensitive pieces of information were stolen or hacked.
 
