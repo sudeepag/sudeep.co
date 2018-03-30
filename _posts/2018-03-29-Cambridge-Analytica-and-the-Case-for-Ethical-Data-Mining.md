@@ -2,11 +2,10 @@
 title: Cambridge Analytica and the Case for Ethical Data Mining
 layout: post
 comments: true
-date: 2018-03-29 00:00:00 +GMT
+date: 2018-03-30 00:00:00 +GMT
 author: Sudeep Agarwal
 categories: ['musings', 'data-science']
 image: 'http://sudeep.co/images/post_images/2018-03-29-Cambridge-Analytica-and-the-Case-for-Ethical-Data-Mining/graphic.png'
-hidden: true
 ---
 
 <div align='center'>
