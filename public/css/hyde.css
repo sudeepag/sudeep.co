@@ -374,7 +374,7 @@ a.sidebar-nav-item:focus {
   fill: #DB4437;
 }
 
-/* PROJECTS */
+/* PROJECTS AND RESEARCH*/
 
 .project {
     width: 100%;
@@ -388,6 +388,15 @@ a.sidebar-nav-item:focus {
 
 .project-img {
     height: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+}
+
+.research-img {
+    height: 200px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
