@@ -6,6 +6,7 @@ date: 2018-05-04 00:00:00 +GMT
 author: Sudeep Agarwal
 categories: ['data-science']
 image: 'http://sudeep.co/images/post_images/2018-03-29-Cambridge-Analytica-and-the-Case-for-Ethical-Data-Mining/graphic.png'
+hidden: True
 ---
 
 Companies like Facebook and Google aren't merely providing a free online service - they're *competing* for your attention because they need it to thrive in today's economy. Your interactions on Facebook, Google and Amazon generate invaluable data without which the machine intelligence that makes these platforms so intuitive and personalized would fail to exist. By making their services free to maximize their user base, many of these companies adopt business models that are dependent on the usage of their services, such as data collection and advertising. This is where our *attention economy* comes in, a theory widely discussed in the fields of psychology, advertising, and economics. 
