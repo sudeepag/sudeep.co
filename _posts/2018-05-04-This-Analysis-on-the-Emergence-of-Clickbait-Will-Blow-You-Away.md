@@ -5,7 +5,7 @@ comments: true
 date: 2018-05-04 00:00:00 +GMT
 author: Sudeep Agarwal
 categories: ['data-science']
-image: 'http://sudeep.co/images/post_images/2018-03-29-Cambridge-Analytica-and-the-Case-for-Ethical-Data-Mining/graphic.png'
+image: 'https://www.fpov.com/wp-content/uploads/Clickbait.jpg'
 hidden: True
 ---
 
