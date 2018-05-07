@@ -79,8 +79,9 @@ html {
 
 .icon {
     display: inline-block;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    width: 3rem;
 }
 
 /* Sidebar links */
