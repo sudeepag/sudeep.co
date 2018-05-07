@@ -79,9 +79,10 @@ html {
 
 .icon {
     display: inline-block;
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-    width: 3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width:40px;
+    /*width: 3rem;*/
 }
 
 /* Sidebar links */
