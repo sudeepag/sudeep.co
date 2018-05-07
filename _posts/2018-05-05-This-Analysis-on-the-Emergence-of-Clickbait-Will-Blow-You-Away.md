@@ -5,7 +5,7 @@ comments: true
 date: 2018-05-05 00:00:00 +GMT
 author: Sudeep Agarwal
 categories: ['data-science']
-image: 'http://sudeep.co/images/post_images/2018-05-05-This-Analysis-on-the-Emergence-of-Clickbait-Will-Blow-You-Away/graphic.jpg'
+image: 'https://cdn.dribbble.com/users/887568/screenshots/2756673/laptop.gif'
 <!-- hidden: True -->
 ---
 <div align='center'>
