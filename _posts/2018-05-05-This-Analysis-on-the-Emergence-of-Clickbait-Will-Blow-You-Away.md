@@ -5,11 +5,11 @@ comments: true
 date: 2018-05-05 00:00:00 +GMT
 author: Sudeep Agarwal
 categories: ['data-science']
-image: 'https://cdn.dribbble.com/users/887568/screenshots/2756673/laptop.gif'
+image: 'http://sudeep.co/images/post_images/2018-05-05-This-Analysis-on-the-Emergence-of-Clickbait-Will-Blow-You-Away/graphic.gif'
 <!-- hidden: True -->
 ---
 <div align='center'>
-<a href='https://dribbble.com/togalata' target="_blank"><img width="400px" src="https://cdn.dribbble.com/users/887568/screenshots/2756673/laptop.gif"></a>
+<a href='https://dribbble.com/togalata' target="_blank"><img width="400px" src="/images/post_images/2018-05-05-This-Analysis-on-the-Emergence-of-Clickbait-Will-Blow-You-Away/graphic.gif"></a>
 </div>
 
 Companies like Facebook and Google aren't merely providing a free online service - they're *competing* for your attention because they need it to thrive in today's economy. Your interactions on these platforms generate invaluable data without which the machine intelligence that makes them so intuitive and personalized would fail to exist. By making their services free to maximize their user base, many of these companies adopt business models that are dependent on the usage of their services, such as data collection and advertising. This is where our *attention economy* comes in, a theory widely discussed in the fields of psychology, advertising, and economics. 
